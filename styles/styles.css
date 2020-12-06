@@ -1,0 +1,625 @@
+/* ==================== Estilização Global ================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background: #312e38;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  padding: 0 40px;
+
+  margin: 0 auto;
+}
+/* ==================== Fim Estilização Global ================== */
+
+header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  width: 80%;
+  padding: 10px 40px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav a strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header nav a img {
+  width: 90px;
+  height: 90px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-perfil {
+  width: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-perfil img {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.user-perfil i {
+  font-size: 25px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-out;
+}
+.user-perfil i:hover {
+  color: #1a5176;
+}
+
+/* ================ Fim Estililzação Nav ============ */
+.search {
+  width: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+}
+.link-home {
+  color: #fff;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+.link-home:hover {
+  color: #1a5176;
+}
+
+.search form {
+  width: 100%;
+  height: 40px;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+}
+
+.search form input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+  border: none;
+  background: #f4f4f4;
+}
+
+.search form button {
+  width: 100px;
+  height: 100%;
+  padding: 0 20px;
+
+  border: none;
+  background: #1a5176;
+}
+
+/*================== Fim estilização search =================*/
+.ongs-content {
+  width: 100%;
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-container {
+  height: 400px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card .front {
+  background-color: #ffffff;
+  color: #312e38;
+  text-align: center;
+}
+
+.image {
+  width: 280px;
+  height: 180px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .back {
+  background-color: #1a5176;
+  color: #ffffff;
+  transform: rotateY(180deg);
+
+  padding: 20px !important;
+}
+
+.card .back p {
+  margin-top: -120px;
+}
+
+.back button {
+  cursor: pointer;
+  padding: 10px;
+  width: 180px;
+  border: 2px solid rgb(5, 138, 82);
+  border-radius: 20px;
+  outline: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+
+  margin-top: 40px;
+}
+
+.card button:hover {
+  background-color: rgb(5, 138, 82);
+}
+
+.links {
+  margin-top: 20px;
+  color: #1a5176;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+
+  transition: all 0.2s ease-out;
+}
+.links a:hover {
+  color: #1a5176;
+}
+/* ================ Fim Estililzação ONgs ============ */
+
+.donate-container {
+  width: 100%;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ong {
+  width: 650px;
+  padding: 20px;
+
+  background: #007bbf;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.ong-image {
+  width: 100%;
+  height: 170px;
+
+  display: flex;
+  justify-content: center;
+}
+.ong-image img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.ong-content {
+  display: flex;
+  flex-direction: column;
+}
+.ong-content p {
+  margin-top: 20px;
+  color: #103650;
+}
+
+.donate-options {
+  width: 400px;
+  height: 440px;
+  padding: 20px;
+  border-radius: 4px;
+
+  background-color: #007bbf;
+}
+
+.donate-options form {
+  width: 100%;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+.donate-options form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+.donate-options form label input {
+  margin-left: 5px;
+}
+.donate-options form h3 {
+  margin: 20px 0;
+}
+.donate-options form .donation-type {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.donate-options form button {
+  width: 100%;
+
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #1a5176;
+  color: #fff;
+
+  margin-top: 30px;
+  transition: all 0.2s ease-out;
+}
+.donate-options form button:hover {
+  background: #103650;
+}
+
+/* ================ Fim Estililzação ONgs ============ */
+.ong-home-title {
+  width: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #fbb801;
+}
+.ong-home-title h3 {
+  border-bottom: 2px solid #007bbf;
+  padding: 10px 0;
+}
+.ong-home-container {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.donation-card {
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  color: #103650;
+}
+.donator-image {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.donator-image img {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+}
+.donation-data form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.donation-data form label {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.donation-data form label input {
+  margin-left: 5px;
+}
+.donation-data form a {
+  text-decoration: none;
+  width: 100%;
+}
+.donation-data form button {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  background: #1a5176 !important;
+  color: #fff;
+  border-radius: 4px;
+
+  margin-top: 20px;
+  transition: all 0.2s ease-out;
+}
+.donation-data form button:hover {
+  background: #103650;
+}
+
+/* ================ Fim ong home ============ */
+
+.login-container {
+  width: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message-content {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  width: 500px;
+  /* padding: 10px 0; */
+}
+
+.login {
+  width: 500px;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: #f4f4f4;
+  color: #1a5176;
+  padding: 20px;
+
+  margin-bottom: 40px;
+}
+
+.login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.login form label input {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #103650;
+}
+
+.login form label select {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid #103650;
+}
+
+.login form button {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  background: #1a5176;
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+  margin: 30px 0 20px 0;
+  color: #f4f4f4;
+}
+.login form button:hover {
+  background: #103650;
+}
+
+.login a {
+  text-decoration: none;
+  color: #007bbf;
+  transition: all 0.2s ease-out;
+  margin: 10px 0;
+}
+
+.login a:hover {
+  text-decoration: underline;
+  color: #103650;
+}
+
+/* ================ Fim ong home ============ */
+.user-container {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-content {
+  width: 800px;
+  padding: 20px;
+
+  background: #cccccc;
+  margin-bottom: 40px;
+}
+.user-content form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  color: #103650;
+}
+.user-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-photo img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+}
+.user-content form label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.user-content form label input {
+  padding: 10px;
+  border: 1px solid #103650;
+  border-radius: 4px;
+
+  background: #999;
+}
+.user-content form label textarea {
+  padding: 10px;
+  border: 1px solid #103650;
+  border-radius: 4px;
+
+  background: #999;
+}
+
+.address {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address-left,
+.address-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-left label,
+.address-right label {
+  width: 350px;
+}
+
+.button {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button button {
+  padding: 10px;
+  border: none;
+  background: #1a5176;
+  border-radius: 4px;
+  color: #fff;
+
+  width: 300px;
+  transition: all 0.2s ease-out;
+}
+.button button:hover {
+  background: #103650;
+}
