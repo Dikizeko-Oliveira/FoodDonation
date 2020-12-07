@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `school_work`
 --
-CREATE DATABASE IF NOT EXISTS `school_work` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE `school_work` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `school_work`;
 -- --------------------------------------------------------
 
