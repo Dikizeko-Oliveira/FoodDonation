@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Dez-2020 às 23:57
+-- Tempo de geração: 07-Dez-2020 às 02:13
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.2.34
 
@@ -20,8 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `school_work`
 --
-CREATE DATABASE `school_work` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `school_work`;
+
 -- --------------------------------------------------------
 
 --
@@ -43,10 +42,7 @@ CREATE TABLE `donation` (
   `donation_accepted` varchar(100) DEFAULT 'Esperando'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `donation`
---
------------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `users`
@@ -74,9 +70,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `users`
---
-
 -- Índices para tabelas despejadas
 --
 
@@ -109,7 +102,7 @@ ALTER TABLE `donation`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restrições para despejos de tabelas
