@@ -17,11 +17,19 @@ function validation() {
     return false;
   }
 
+  if (email.value !== "") {
+    email.style.borderColor = "#103650";
+  }
+
   if (password.value === "") {
     password.style.borderColor = "#E81123";
     alert("Insira uma senha válida.");
     return false;
   }
   
+  if (password.value !== "") {
+    password.style.borderColor = "#103650";
+  }
+
   return true;
 }

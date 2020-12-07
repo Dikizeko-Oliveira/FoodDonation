@@ -14,13 +14,16 @@
   $check_document_query = "SELECT id FROM `users` WHERE document = '$document'";
   $check_document_result = mysqli_query($connection, $check_document_query);
 
-  if(!empty($check_result)){
+  $row_email = mysqli_fetch_assoc($check_result);
+  $row_document = mysqli_fetch_assoc($check_document_result);
+
+  if(!empty($row_email)){
     $_SESSION['msg'] = "<p style='color: #E81123; padding-top: 10px;'>Esse email já está cadastrado, escolha outro.</p>";
     header("Location: signup.php");
     return false;
   }
 
-  if(!empty($check_document_result)){
+  if(!empty($row_document)){
     $_SESSION['msg'] = "<p style='color: #E81123; padding-top: 10px;'>Esse número de documento já está cadastrado.</p>";
     header("Location: signup.php");
     return false;

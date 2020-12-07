@@ -30,10 +30,18 @@ function validation() {
     return false;
   }
 
+  if (name.value !== "") {
+    name.style.borderColor = "#103650";
+  }
+
   if(email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1) {
     email.style.borderColor = "#E81123";
     alert("Insira um email válido");
     return false;
+  }
+
+  if (email.value !== "") {
+    email.style.borderColor = "#103650";
   }
 
   if (cell_phone.value === "") {
@@ -42,13 +50,16 @@ function validation() {
     return false;
   }
 
+  if (cell_phone.value !== "") {
+    cell_phone.style.borderColor = "#103650";
+  }
+
   if (document_number.value === "") {
     document_number.style.borderColor = "#E81123";
     alert("Insira um número válido.");
     return false;
   } else {
-    var data = document_number.value;
-    if(data.length === 11) {
+    var data = document_number.value.replace(".","");
       function CheckCPF(strCPF) {
         var Soma;
         var Resto;
@@ -69,6 +80,8 @@ function validation() {
           if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
           return true;
         };
+        data = data.replace(".","");
+        data = data.replace("-","");
         if(!CheckCPF(data)) {
           document_number.style.borderColor = "#E81123";
           alert("CPF inserido não é válido");
@@ -76,67 +89,8 @@ function validation() {
         }
     }
 
-    if(data.length > 11) {
-      function CheckCNPJ(cnpj){
-        let soma;
-        let resultado;
-        let i;
-        let tamanho;
-        let numeros;
-        let digitos;
-        let pos;
-      
-        cnpj = cnpj.replace(/[^\d]+/g, "");
-      
-        if (cnpj.length !== 14) return false;
-      
-        // Elimina CNPJs invalidos conhecidos
-        if (
-          cnpj === "00000000000000" ||
-          cnpj === "11111111111111" ||
-          cnpj === "22222222222222" ||
-          cnpj === "33333333333333" ||
-          cnpj === "44444444444444" ||
-          cnpj === "55555555555555" ||
-          cnpj === "66666666666666" ||
-          cnpj === "77777777777777" ||
-          cnpj === "88888888888888" ||
-          cnpj === "99999999999999"
-        )
-          return false;
-      
-        // Valida DVs
-        tamanho = cnpj.length - 2;
-        numeros = cnpj.substring(0, tamanho);
-        digitos = cnpj.substring(tamanho);
-        soma = 0;
-        pos = tamanho - 7;
-        for (i = tamanho; i >= 1; i--) {
-          soma += numeros.charAt(tamanho - i) * pos--;
-          if (pos < 2) pos = 9;
-        }
-        resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-        if (resultado !== digitos.charAt(0)) return false;
-      
-        tamanho = tamanho + 1;
-        numeros = cnpj.substring(0, tamanho);
-        soma = 0;
-        pos = tamanho - 7;
-        for (i = tamanho; i >= 1; i--) {
-          soma += numeros.charAt(tamanho - i) * pos--;
-          if (pos < 2) pos = 9;
-        }
-        resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-        if (resultado !== digitos.charAt(1)) return false;
-      
-        return true;
-      };
-      if(!CheckCNPJ(data)) {
-        document_number.style.borderColor = "#E81123";
-        alert("CNPJ inserido não é válido");
-        return false;
-      }
-    }
+  if (document_number.value !== "") {
+    document_number.style.borderColor = "#103650";
   }
 
   if (category.value === "Selecione uma opção") {
@@ -145,10 +99,18 @@ function validation() {
     return false;
   }
 
+  if (category.value !== "") {
+    category.style.borderColor = "#103650";
+  }
+
   if (password_hash.value === "") {
     password_hash.style.borderColor = "#E81123";
     alert("Insira uma senha válida.");
     return false;
+  }
+ 
+  if (password_hash.value !== "") {
+    password_hash.style.borderColor = "#103650";
   }
 
   if (password_confirm.value === "") {
@@ -157,12 +119,20 @@ function validation() {
     return false;
   }
 
+  if (password_confirm.value !== "") {
+    password_confirm.style.borderColor = "#103650";
+  }
+
   if (password_confirm.value !== password_hash.value ) {
     password_hash.style.borderColor = "#E81123";
     password_confirm.style.borderColor = "#E81123";
     alert("As senhas precisam ser iguais.");
     return false;
   }
-  
+    if (password_confirm.value === password_hash.value ) {
+      password_hash.style.borderColor = "#103650";
+      password_confirm.style.borderColor = "#103650";
+    }
+    
   return true;
 }
