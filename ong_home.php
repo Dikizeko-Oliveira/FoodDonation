@@ -65,7 +65,7 @@ if(!isset($_SESSION["user_id"])) {
         // Calcula o início da visualização
         $init = ($qnt_results_pg * $page) - $qnt_results_pg;
 
-        $get_donations = "SELECT `donation`.*, `users`.`username`, `users`.`email` FROM `donation` INNER JOIN `users` ON `donation`.`donatorId` = `users`.`id` WHERE payeeId = 3 AND donation_accepted = 'Esperando'";
+        $get_donations = "SELECT `donation`.*, `users`.`username`, `users`.`email` FROM `donation` INNER JOIN `users` ON `donation`.`donatorId` = `users`.`id` WHERE payeeId = $userId AND donation_accepted = 'Esperando'";
         
         $result_donations = mysqli_query($connection, $get_donations);
 

@@ -29,7 +29,7 @@
     return false;
   }
 
-  $donation_query = "INSERT INTO users (username, email, cell_phone, document, category, password_hash, created_at) VALUES ('$username', '$email', '$cell_phone', '$document', '$category', '$password', NOW())";
+  $donation_query = "INSERT INTO users (username, email, cell_phone, document, category, password_hash, created_at) VALUES ('$username', '$email', '$cell_phone', '$document', '$category', '$password_hash', NOW())";
   mysqli_query($connection, $donation_query);
 
   if(mysqli_insert_id($connection)) {

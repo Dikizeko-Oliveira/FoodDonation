@@ -82,7 +82,6 @@ include_once("db_connection.php");
               type="password" 
               placeholder="Digite sua senha" 
               name="password_hash"
-              o
             />
           </label>
           <label for="password_confirm">

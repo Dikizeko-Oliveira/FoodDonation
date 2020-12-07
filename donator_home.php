@@ -116,11 +116,11 @@ if(!isset($_SESSION["user_id"])) {
         //Limitar os links antes e depois
         $max_links = 3;
 
-        echo "<a href='index.php?page=1'>Primeira</a>";
+        echo "<a href='donator_home.php?page=1'>Primeira</a>";
 
         for($previous = $page - $max_links; $previous <= $page - 1; $previous++){
           if($previous >= 1){
-            echo "<a href='index.php?page=$previous'>$previous</a>";
+            echo "<a href='donator_home.php?page=$previous'>$previous</a>";
           }
         }
 
@@ -128,11 +128,11 @@ if(!isset($_SESSION["user_id"])) {
 
         for($next = $page + 1; $next <= $page + $max_links; $next++){
           if($next <= $quantity_pg){
-            echo "<a href='index.php?page=$next'>$next</a>";
+            echo "<a href='donator_home.php?page=$next'>$next</a>";
           }
         }
         
-        echo "<a href='index.php?page=$quantity_pg'>Última</a>";
+        echo "<a href='donator_home.php?page=$quantity_pg'>Última</a>";
      ?>
     </div>
   </section>
